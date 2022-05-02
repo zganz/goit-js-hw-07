@@ -15,14 +15,7 @@ const galleryEl = document.querySelector(".gallery")
 galleryEl.insertAdjacentHTML("beforeend", imagesHtml);
 
 
-
-galleryEl.addEventListener("click", handleClick)
-function handleClick(evt){
-    evt.preventDefault();
-    const url = evt.target.dataset.source;
-    
-}
-var lightbox = new SimpleLightbox('.gallery a', {
+lightbox = new SimpleLightbox('.gallery a', {
     'captionsData': 'alt',
     'captionDelay': 250
 });

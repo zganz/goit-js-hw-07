@@ -25,7 +25,11 @@ galleryEl.insertAdjacentHTML("beforeend", imagesHtml);
 
 
 galleryEl.addEventListener("click", handleClick)
+
 function handleClick(evt){
+  if(evt.target.nodeName !== 'IMG'){
+    return;
+  }
     evt.preventDefault();
     const url = evt.target.dataset.source;
     basicLightbox.create(`
